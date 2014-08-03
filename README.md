@@ -1,6 +1,8 @@
-# test-js
+# Invaderz
 
-A Quil sketch designed to ... well, that part is up to you.
+A ClojureScript + Quil study inspired by Christian Gross' [Invaders](http://www.christiangross.info/32767-invaders-14-poster/) project.
+
+The program draws a 10*10 matrix that is gradually filled with random invaders in random colours.
 
 ## Usage
 
