@@ -29877,24 +29877,20 @@ invaderz.core.random_rgb = function random_rgb() {
   return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cemerick.pprng.int$.call(null, invaderz.core.rng, 255), cemerick.pprng.int$.call(null, invaderz.core.rng, 255), cemerick.pprng.int$.call(null, invaderz.core.rng, 255)], null);
 };
 invaderz.core.update = function update(state) {
-  var map__8096 = state;
-  var map__8096__$1 = cljs.core.seq_QMARK_.call(null, map__8096) ? cljs.core.apply.call(null, cljs.core.hash_map, map__8096) : map__8096;
-  var invaders = cljs.core.get.call(null, map__8096__$1, new cljs.core.Keyword(null, "invaders", "invaders", 1637453956));
-  var rand_x = cljs.core.List.EMPTY;
-  var rand_y = cljs.core.List.EMPTY;
-  return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "invaders", "invaders", 1637453956), cljs.core.assoc.call(null, invaders, invaderz.core.random_coords.call(null, invaderz.core.matrix_size), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "rgb", "rgb", 1014017087), invaderz.core.random_rgb.call(null), new cljs.core.Keyword(null, "id", "id", 1013907597), invaderz.core.random_invader_id.call(null, invaderz.core.max_invader_id)], null))], null);
+  return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "invaders", "invaders", 1637453956), cljs.core.assoc.call(null, (new cljs.core.Keyword(null, "invaders", "invaders", 1637453956)).cljs$core$IFn$_invoke$arity$1(state), invaderz.core.random_coords.call(null, invaderz.core.matrix_size), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "rgb", "rgb", 1014017087), invaderz.core.random_rgb.call(null), new cljs.core.Keyword(null, "id", "id", 1013907597), 
+  invaderz.core.random_invader_id.call(null, invaderz.core.max_invader_id)], null))], null);
 };
 invaderz.core.draw_invader = function draw_invader(square_px, translation_coords, rgb, invader) {
   var tr__4870__auto__ = cljs.core.map.call(null, cljs.core.partial.call(null, cljs.core._PLUS_, square_px), cljs.core.map.call(null, cljs.core.partial.call(null, cljs.core._STAR_, square_px, invaderz.core.invader_size + 2), translation_coords));
   quil.core.push_matrix.call(null);
   quil.core.translate.call(null, tr__4870__auto__);
   cljs.core.dorun.call(null, cljs.core.map.call(null, function(tr__4870__auto__) {
-    return function(p__8099, row) {
-      var map__8100 = p__8099;
-      var map__8100__$1 = cljs.core.seq_QMARK_.call(null, map__8100) ? cljs.core.apply.call(null, cljs.core.hash_map, map__8100) : map__8100;
-      var draw = cljs.core.get.call(null, map__8100__$1, new cljs.core.Keyword(null, "draw", "draw", 1016996022));
-      var y = cljs.core.get.call(null, map__8100__$1, new cljs.core.Keyword(null, "y", "y", 1013904363));
-      var x = cljs.core.get.call(null, map__8100__$1, new cljs.core.Keyword(null, "x", "x", 1013904362));
+    return function(p__5572, row) {
+      var map__5573 = p__5572;
+      var map__5573__$1 = cljs.core.seq_QMARK_.call(null, map__5573) ? cljs.core.apply.call(null, cljs.core.hash_map, map__5573) : map__5573;
+      var draw = cljs.core.get.call(null, map__5573__$1, new cljs.core.Keyword(null, "draw", "draw", 1016996022));
+      var y = cljs.core.get.call(null, map__5573__$1, new cljs.core.Keyword(null, "y", "y", 1013904363));
+      var x = cljs.core.get.call(null, map__5573__$1, new cljs.core.Keyword(null, "x", "x", 1013904362));
       if (cljs.core._EQ_.call(null, draw, 1)) {
         cljs.core.apply.call(null, quil.core.fill, rgb);
         return quil.core.rect.call(null, x * square_px, y * square_px, square_px, square_px);
@@ -29909,13 +29905,13 @@ invaderz.core.spawn_invader.call(null, 5, 999);
 invaderz.core.draw = function draw(state) {
   quil.core.background.call(null, 20);
   quil.core.no_stroke.call(null);
-  return cljs.core.dorun.call(null, cljs.core.map.call(null, function(p__8104) {
-    var vec__8105 = p__8104;
-    var translation_coords = cljs.core.nth.call(null, vec__8105, 0, null);
-    var map__8106 = cljs.core.nth.call(null, vec__8105, 1, null);
-    var map__8106__$1 = cljs.core.seq_QMARK_.call(null, map__8106) ? cljs.core.apply.call(null, cljs.core.hash_map, map__8106) : map__8106;
-    var rgb = cljs.core.get.call(null, map__8106__$1, new cljs.core.Keyword(null, "rgb", "rgb", 1014017087));
-    var id = cljs.core.get.call(null, map__8106__$1, new cljs.core.Keyword(null, "id", "id", 1013907597));
+  return cljs.core.dorun.call(null, cljs.core.map.call(null, function(p__5577) {
+    var vec__5578 = p__5577;
+    var translation_coords = cljs.core.nth.call(null, vec__5578, 0, null);
+    var map__5579 = cljs.core.nth.call(null, vec__5578, 1, null);
+    var map__5579__$1 = cljs.core.seq_QMARK_.call(null, map__5579) ? cljs.core.apply.call(null, cljs.core.hash_map, map__5579) : map__5579;
+    var rgb = cljs.core.get.call(null, map__5579__$1, new cljs.core.Keyword(null, "rgb", "rgb", 1014017087));
+    var id = cljs.core.get.call(null, map__5579__$1, new cljs.core.Keyword(null, "id", "id", 1013907597));
     return invaderz.core.draw_invader.call(null, invaderz.core.square_px, translation_coords, rgb, invaderz.core.spawn_invader.call(null, invaderz.core.invader_size, id));
   }, cljs.core.seq.call(null, (new cljs.core.Keyword(null, "invaders", "invaders", 1637453956)).cljs$core$IFn$_invoke$arity$1(state))));
 };

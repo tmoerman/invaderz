@@ -74,13 +74,10 @@
   [(rng/int rng 255) (rng/int rng 255) (rng/int rng 255)])
 
 (defn update [state]
-  (let [{:keys [invaders]} state
-        rand-x ()
-        rand-y ()]
-    {:invaders
-      (assoc invaders
-        (random-coords matrix-size) {:rgb (random-rgb)
-                                     :id (random-invader-id max-invader-id)})}))
+  {:invaders
+   (assoc (:invaders state)
+     (random-coords matrix-size) {:rgb (random-rgb)
+                                  :id (random-invader-id max-invader-id)})})
 
 ;; DRAW
 
