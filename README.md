@@ -4,6 +4,8 @@ A ClojureScript + Quil study inspired by Christian Gross' [Invaders](http://www.
 
 The program draws a 10*10 matrix that is gradually filled with random invaders in random colours.
 
+[invaders.png]
+
 ## Usage
 
 Run `lein compile` command and open `web/index.html` in your browser.
